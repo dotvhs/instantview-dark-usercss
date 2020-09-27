@@ -14,3 +14,7 @@
 @-moz-document domain("#{$s_domain}") {
 	@import "p/style";
 }
+
+@-moz-document regexp("https?:\/\/ivwebcontent\.telegram\.org\/my\/.*?\.com\/result\?url=.*") {
+	@import "p/preview";
+}

@@ -1,3 +1,172 @@
+@import "colors";
+
+body,
+header {
+	background: $dark;
+}
+
 body {
-	font-size: 100%;
+	color: $text;
+}
+
+// body {
+// 	color: ;
+// }
+
+a,
+a:hover,
+a:visited {
+	color: $links;
+	transition: all 250ms ease;
+}
+
+header .header-wrap {
+	box-shadow: inset 0 -1px 0 mix($dark, #fff, 97);
+}
+
+header .breadcrumb > li::after {
+	color: $text-light;
+}
+
+.input-dropdown .form-control {
+	color: $text-med;
+}
+
+header .header-wrap .btn {
+	color: $links;
+	&.disabled {
+		color: mix($links, $dark, 30);
+	}
+}
+
+.page-preview-site-name {
+	color: $blue;
+}
+
+.result-preview-wrap .result-preview,
+.result-header,
+.rules-header {
+	background-color: mix($dark, #000, 80);
+}
+
+.result-header {
+	color: $text-med;
+	font-weight: 400;
+}
+
+.rules-header {
+	border-top-color: $text-light;
+}
+
+.custom-buttom {
+	font-weight: 900;
+	font-size: 13px;
+	opacity: 70%;
+	transition: opacity 250ms ease;
+	margin: 0;
+	padding: 3px;
+	&:hover {
+		opacity: 100%;
+	}
+}
+
+.header-panel .list-group-template {
+	background-color: $dark;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.9);
+}
+
+.list-group-item-body {
+	box-shadow: inset 0 -1px 0 mix($dark, #fff, 97);
+}
+
+.section-block {
+	border: 0px solid #ccc;
+	border-top-width: 2px;
+}
+
+.original-saved .section-block-label,
+.rules-saved .section-block-label,
+.result-tracked .section-block-label,
+.result-saved .section-block-label,
+.result-not-modified .section-block-label,
+.url-status .list-group-row .list-group-item-success {
+	background-color: $darkgreen;
+}
+
+.original-saved .section-block,
+.rules-saved .section-block,
+.result-tracked .section-block,
+.result-tracked .result-preview-wrap,
+.result-saved .section-block,
+.result-saved .result-preview-wrap,
+.result-not-modified .section-block,
+.result-not-modified .result-preview-wrap {
+	border-color: $darkgreen;
+}
+
+.rules-changed .section-block-label,
+.result-modified .section-block-label,
+.url-status .list-group-row .list-group-item-warning {
+	background-color: $darkorange;
+}
+
+.rules-changed .section-block,
+.result-modified .section-block,
+.result-modified .result-preview-wrap {
+	border-color: $darkorange;
+}
+
+.original-loaded .section-block-label {
+	background-color: $darkblue;
+}
+
+.original-loaded .section-block {
+	border-color: $darkblue;
+}
+
+.result-error .section-block-label,
+.url-status .list-group-row .list-group-item-danger {
+	background-color: $darkred;
+}
+
+.result-error .section-block,
+.result-error .result-preview-wrap {
+	border-color: $darkred;
+}
+
+// CONSOLE
+.text-success {
+	color: $lightgreen;
+}
+.text-warning {
+	color: $lightorange;
+}
+.text-danger {
+	color: $lightred;
+}
+
+.debug-wrap > div:nth-of-type(even) {
+	background-color: $lighter;
+}
+
+.debug-wrap > div:hover {
+	background-color: mix($dark, #fff, 95);
+}
+
+.header-labels .help-label {
+	color: $text-lighter;
+}
+
+.header-labels .help-label a {
+	color: $text-med;
+}
+
+.status-section,
+.debug-section .section-block {
+	border-top-color: $text-light;
+}
+
+.list-group-row .list-group-item-warning,
+.list-group-template .list-group-item-warning {
+	color: $lightorange;
 }

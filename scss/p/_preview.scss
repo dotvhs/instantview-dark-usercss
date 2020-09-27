@@ -1,0 +1,33 @@
+@import "colors";
+
+:root {
+	--simple-translate-main-text: $links;
+	--simple-translate-sub-text: #737373;
+	--simple-translate-line: #ededf0;
+	--simple-translate-button: #d7d7db;
+	--simple-translate-highlight: $blue;
+	--simple-translate-main-bg: #ffffff;
+}
+
+body {
+	background: $lighter;
+	color: mix($lighter, #fff, 30);
+}
+
+[data-block]::after,
+[data-block] [data-block]::after {
+	background: rgba(27, 51, 27, 0.8);
+	color: #73b573;
+}
+
+article hr::before {
+	border-top-color: mix($dark, #fff, 85);
+}
+
+article a[href] {
+	color: $blue;
+}
+
+section.message > aside > cite {
+	color: $text-lighter;
+}
