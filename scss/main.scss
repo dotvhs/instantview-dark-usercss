@@ -15,6 +15,10 @@
 	@import "p/style";
 }
 
-@-moz-document regexp("https?:\/\/ivwebcontent\.telegram\.org\/my\/.*?\.com\/result\?url=.*") {
+@-moz-document regexp("https?:\/\/ivwebcontent\.telegram\.org\/my\/.*?\.com\/result\?url=.*"), regexp("https?:\/\/ivwebcontent\.telegram\.org\/.*?\/.*?\/.*?\/result\?.*") {
 	@import "p/preview";
+}
+
+@-moz-document domain("instantview.telegram.org"), regexp(".*ivwebcontent\\.telegram\\.org\\/.*\\/result.*") {
+	@import "p/editor";
 }

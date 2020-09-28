@@ -1,4 +1,5 @@
 $dark: #191a1c;
+$darker: mix($dark, black, 80);
 $lighter: #1d1f21;
 $blue: rgb(79, 140, 201);
 
@@ -9,13 +10,15 @@ $bg: $dark;
 $text-light: mix($dark, #fff, 92);
 $text-lighter: mix($dark, #fff, 75);
 $text-med: mix($dark, #fff, 50);
+$text-debug: mix($dark, #fff, 60);
 $text: mix($dark, #fff, 20);
 
 $darkgreen: #397339;
 $darkorange: #c1732f;
 $darkblue: #235886;
 $darkred: #b03431;
+$darkteal: #27858a;
 
-$lightgreen: #6a9f6b;
+$lightgreen: #63bd49;
 $lightorange: #df9451;
 $lightred: #f25e5b;

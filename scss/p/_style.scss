@@ -1,11 +1,16 @@
 @import "colors";
 
 body,
-header {
+header,
+.dropdown-menu {
 	background: $dark;
 }
 
 body {
+	color: $text;
+}
+
+.list-group-issue-item {
 	color: $text;
 }
 
@@ -18,6 +23,10 @@ a:hover,
 a:visited {
 	color: $links;
 	transition: all 250ms ease;
+}
+
+main.rules section h3 a.section-header {
+	color: $links;
 }
 
 header .header-wrap {
@@ -39,7 +48,14 @@ header .header-wrap .btn {
 	}
 }
 
-.page-preview-site-name {
+.section-btn.disabled,
+.contest-btn.inactive {
+	color: mix($blue, $dark, 30);
+}
+
+.page-preview-site-name,
+.logged-name,
+.btn-link {
 	color: $blue;
 }
 
@@ -61,12 +77,12 @@ header .header-wrap .btn {
 .custom-buttom {
 	font-weight: 900;
 	font-size: 13px;
-	opacity: 70%;
+	opacity: 0.7;
 	transition: opacity 250ms ease;
 	margin: 0;
 	padding: 3px;
 	&:hover {
-		opacity: 100%;
+		opacity: 1;
 	}
 }
 
@@ -80,8 +96,13 @@ header .header-wrap .btn {
 }
 
 .section-block {
-	border: 0px solid #ccc;
+	border: 0px solid $text-light;
 	border-top-width: 2px;
+}
+
+.rules-header,
+.result-preview-wrap {
+	border-color: $text-light;
 }
 
 .original-saved .section-block-label,
@@ -89,7 +110,9 @@ header .header-wrap .btn {
 .result-tracked .section-block-label,
 .result-saved .section-block-label,
 .result-not-modified .section-block-label,
-.url-status .list-group-row .list-group-item-success {
+.url-status .list-group-row .list-group-item-success,
+.list-group-row .list-group-item-success::before,
+.list-group-template .list-group-item-success::before {
 	background-color: $darkgreen;
 }
 
@@ -106,7 +129,9 @@ header .header-wrap .btn {
 
 .rules-changed .section-block-label,
 .result-modified .section-block-label,
-.url-status .list-group-row .list-group-item-warning {
+.url-status .list-group-row .list-group-item-warning,
+.list-group-row .list-group-item-warning::before,
+.list-group-template .list-group-item-warning::before {
 	background-color: $darkorange;
 }
 
@@ -116,16 +141,31 @@ header .header-wrap .btn {
 	border-color: $darkorange;
 }
 
-.original-loaded .section-block-label {
+.original-loaded .section-block-label,
+header .header-breadcrumb .dropdown.open > .dropdown-menu > li.active > a:hover,
+header .header-breadcrumb .dropdown.open > .dropdown-menu > li.active > a,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li.active > a,
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
 	background-color: $darkblue;
 }
 
-.original-loaded .section-block {
+.original-loaded .section-block,
+#dev_page_content_wrap blockquote,
+#dev_side_nav_cont .dev_side_nav li.active > a {
 	border-color: $darkblue;
 }
 
 .result-error .section-block-label,
-.url-status .list-group-row .list-group-item-danger {
+.url-status .list-group-row .list-group-item-danger,
+.list-group-row .list-group-item-danger::before,
+.list-group-template .list-group-item-danger::before {
 	background-color: $darkred;
 }
 
@@ -134,30 +174,67 @@ header .header-wrap .btn {
 	border-color: $darkred;
 }
 
+.result-not-tracked .section-block-label {
+	background-color: $darkteal;
+}
+
+.result-not-tracked .section-block,
+.result-not-tracked .result-preview-wrap {
+	border-color: $darkteal;
+}
+
 // CONSOLE
-.text-success {
+.text-success,
+a.list-group-item-success .list-group-item-heading,
+.list-group-template .list-group-item-success,
+.table-contest-winner,
+.contest-item-prize,
+.issue-info-row-accepted dt {
 	color: $lightgreen;
 }
-.text-warning {
+.text-warning,
+a.list-group-item-warning .list-group-item-heading,
+.list-group-template .list-group-item-warning {
 	color: $lightorange;
 }
-.text-danger {
+.text-danger,
+a.list-group-item-danger .list-group-item-heading,
+.list-group-template .list-group-item-danger,
+.list-group-row .list-group-item-danger,
+.list-group-template .list-group-item-danger {
 	color: $lightred;
 }
 
-.debug-wrap > div:nth-of-type(even) {
+.issue-info-row-accepted dd {
+	border-color: $lightgreen;
+}
+
+.text-muted {
+	color: $text-debug;
+}
+
+.debug-wrap > div:nth-of-type(even),
+header .header-breadcrumb .dropdown.open > .dropdown-menu > li > a:hover {
 	background-color: $lighter;
 }
 
-.debug-wrap > div:hover {
-	background-color: mix($dark, #fff, 95);
+.debug-wrap > div:hover,
+.nav > li > a:hover,
+.nav > li > a:focus,
+#dev_side_nav_cont .dev_side_nav li a:hover,
+.btn.iv-btn:hover,
+.popup-buttons .btn:hover {
+	background-color: mix($dark, #fff, 95) !important;
 }
 
-.header-labels .help-label {
+.header-labels .help-label,
+.list-group-contest-header .contest-item-templates,
+.contest-item-cell {
 	color: $text-lighter;
 }
 
-.header-labels .help-label a {
+.header-labels .help-label a,
+.list-group-contest-header {
 	color: $text-med;
 }
 
@@ -169,4 +246,65 @@ header .header-wrap .btn {
 .list-group-row .list-group-item-warning,
 .list-group-template .list-group-item-warning {
 	color: $lightorange;
+}
+
+// FORMS
+
+.form-control {
+	color: $text;
+	background-color: $darker;
+	&:focus {
+		border-color: $text-lighter;
+	}
+	&::placeholder {
+		color: $text-lighter;
+	}
+}
+
+.form-control.domain-filter,
+.form-control {
+	border-color: $text-light;
+}
+
+header .breadcrumb > .active,
+header .breadcrumb > .active a {
+	color: $text-med;
+}
+
+.contest-rules-status {
+	color: $text-lighter;
+}
+
+.contest-rules-status a {
+	color: $lightred;
+}
+
+// DOCS
+#dev_page_content_wrap pre {
+	background-color: $lighter;
+}
+
+#dev_page_content_wrap code {
+	background-color: mix($dark, black, 70);
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td,
+.nav-pills > li.divider,
+.nav-footer,
+hr,
+.list-group-contest-header,
+.list-group-contest-item,
+.list-group-contest-item-empty,
+.table-contest td,
+.table-contest {
+	border-color: mix($dark, #fff, 95);
+}
+
+section h3 .header-count {
+	color: $text-lighter;
 }
