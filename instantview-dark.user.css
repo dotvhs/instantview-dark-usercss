@@ -235,7 +235,11 @@
   article a[href] {
     color: #4f8cc9; }
   section.message > aside > cite {
-    color: #535355; } }
+    color: #535355; }
+  section.channel > a {
+    background-color: #141516; }
+  section.channel > a > h4 {
+    color: #bababb; } }
 
 @-moz-document domain("instantview.telegram.org"), regexp(".*ivwebcontent\\.telegram\\.org\\/.*\\/result.*") {
   :root {

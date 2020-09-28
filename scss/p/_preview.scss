@@ -31,3 +31,11 @@ article a[href] {
 section.message > aside > cite {
 	color: $text-lighter;
 }
+
+section.channel > a {
+	background-color: $darker;
+}
+
+section.channel > a > h4 {
+	color: $links;
+}
