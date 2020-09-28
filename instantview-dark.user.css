@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Instant View Dark
-@version      1.0.1
+@version      1.0.2
 @description  Telegram's Instant View Editor Dark
 @namespace    https://github.com/dotvhs/instantview-dark-usercss
 @author       dotvhs
@@ -215,7 +215,7 @@
   iframe#original-frame {
     background-color: #fff; } }
 
-@-moz-document regexp("https?:\/\/ivwebcontent\.telegram\.org\/my\/.*?\/result\?url=.*"), regexp("https?:\/\/ivwebcontent\.telegram\.org\/.*?\/.*?\/.*?\/result\?.*") {
+@-moz-document regexp("https?:\/\/ivwebcontent\.telegram\.org\/my\/.*?\/result\?url=.*"), regexp("https?:\/\/ivwebcontent\.telegram\.org\/.*?\/.*?\/.*?\/result\?.*"), regexp("https?:\/\/ivwebcontent\.telegram\.org\/templates\/agerpres.ro\/result\?url=.*") {
   :root {
     --simple-translate-main-text: $links;
     --simple-translate-sub-text: #737373;
