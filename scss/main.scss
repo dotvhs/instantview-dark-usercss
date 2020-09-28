@@ -15,7 +15,7 @@
 	@import "p/style";
 }
 
-@-moz-document regexp("https?:\/\/ivwebcontent\.telegram\.org\/my\/.*?\.com\/result\?url=.*"), regexp("https?:\/\/ivwebcontent\.telegram\.org\/.*?\/.*?\/.*?\/result\?.*") {
+@-moz-document regexp("https?:\/\/ivwebcontent\.telegram\.org\/my\/.*?\/result\?url=.*"), regexp("https?:\/\/ivwebcontent\.telegram\.org\/.*?\/.*?\/.*?\/result\?.*") {
 	@import "p/preview";
 }
 
