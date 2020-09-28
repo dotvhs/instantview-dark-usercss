@@ -105,6 +105,10 @@ header .header-wrap .btn {
 	border-color: $text-light;
 }
 
+.url-status .list-group-row {
+	background-color: $text-light;
+}
+
 .original-saved .section-block-label,
 .rules-saved .section-block-label,
 .result-tracked .section-block-label,
@@ -307,4 +311,8 @@ hr,
 
 section h3 .header-count {
 	color: $text-lighter;
+}
+
+iframe#original-frame {
+	background-color: #fff;
 }

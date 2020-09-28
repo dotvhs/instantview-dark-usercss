@@ -70,6 +70,8 @@
   .rules-header,
   .result-preview-wrap {
     border-color: #2b2c2e; }
+  .url-status .list-group-row {
+    background-color: #2b2c2e; }
   .original-saved .section-block-label,
   .rules-saved .section-block-label,
   .result-tracked .section-block-label,
@@ -209,7 +211,9 @@
   .table-contest {
     border-color: #252527; }
   section h3 .header-count {
-    color: #535355; } }
+    color: #535355; }
+  iframe#original-frame {
+    background-color: #fff; } }
 
 @-moz-document regexp("https?:\/\/ivwebcontent\.telegram\.org\/my\/.*?\.com\/result\?url=.*"), regexp("https?:\/\/ivwebcontent\.telegram\.org\/.*?\/.*?\/.*?\/result\?.*") {
   :root {
